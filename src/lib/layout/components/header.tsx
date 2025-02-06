@@ -39,7 +39,7 @@ export const Header = () => {
       <Container maxW="container.xl">
         <Flex justify="space-between" align="center">
           {/* Logo */}
-          <Link href="/">
+          <Link href="/" _focus={{ outline: 'none', boxShadow: 'none' }}>
             <HStack gap={2}>
               <Image
                 src="/assets/logos.svg"

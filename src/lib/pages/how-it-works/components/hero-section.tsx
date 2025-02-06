@@ -19,7 +19,7 @@ export const HeroSection = () => {
           justify="space-between"
           gap={8}
           px={3}
-          mt={5}
+          mt={10}
         >
           <Box flex="1" maxW={{ base: '100%', lg: '50%' }}>
             <Heading
