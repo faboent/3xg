@@ -2,52 +2,40 @@
 
 import type { IconButtonProps } from '@chakra-ui/react';
 import { ClientOnly, IconButton, Skeleton } from '@chakra-ui/react';
-import { ThemeProvider, useTheme, type ThemeProviderProps } from 'next-themes';
 import { forwardRef } from 'react';
-import { LuMoon, LuSun } from 'react-icons/lu';
+import { LuSun } from 'react-icons/lu';
 
-export function ColorModeProvider(props: ThemeProviderProps) {
-  return (
-    <ThemeProvider attribute="class" disableTransitionOnChange {...props} />
-  );
+export function ColorModeProvider({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
 }
 
 export function useColorMode() {
-  const { resolvedTheme, setTheme } = useTheme();
-  const toggleColorMode = () => {
-    setTheme(resolvedTheme === 'light' ? 'dark' : 'light');
-  };
   return {
-    colorMode: resolvedTheme,
-    setColorMode: setTheme,
-    toggleColorMode,
+    colorMode: 'light',
+    setColorMode: () => {},
+    toggleColorMode: () => {},
   };
 }
 
-export function useColorModeValue<T>(light: T, dark: T) {
-  const { colorMode } = useColorMode();
-  return colorMode === 'light' ? light : dark;
+export function useColorModeValue<T>(light: T) {
+  return light;
 }
 
 export function ColorModeIcon() {
-  const { colorMode } = useColorMode();
-  return colorMode === 'light' ? <LuSun /> : <LuMoon />;
+  return <LuSun />;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface ColorModeButtonProps extends Omit<IconButtonProps, 'aria-label'> {}
+type ColorModeButtonProps = Omit<IconButtonProps, 'aria-label'>;
 
 export const ColorModeButton = forwardRef<
   HTMLButtonElement,
   ColorModeButtonProps
 >(function ColorModeButton(props, ref) {
-  const { toggleColorMode } = useColorMode();
   return (
     <ClientOnly fallback={<Skeleton boxSize="8" />}>
       <IconButton
-        onClick={toggleColorMode}
         variant="ghost"
-        aria-label="Toggle color mode"
+        aria-label="Color mode"
         size="sm"
         ref={ref}
         {...props}
