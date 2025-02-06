@@ -53,7 +53,11 @@ export const NewsletterSection = () => {
 
           <Text fontSize={['10px', '10px', '10px', '11px']} color="gray.500">
             By joining, you agree to our{' '}
-            <Link color="rgb(231, 146, 113)" href="/terms">
+            <Link
+              color="rgb(231, 146, 113)"
+              href="/terms"
+              _focus={{ outline: 'none', boxShadow: 'none' }}
+            >
               terms and conditions
             </Link>
             .

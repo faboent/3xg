@@ -85,6 +85,7 @@ export const Footer = () => {
                 textDecoration="none"
                 _hover={{ textDecoration: 'none' }}
                 fontSize="14px"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
               >
                 My Account
               </Link>
@@ -93,6 +94,7 @@ export const Footer = () => {
                 textDecoration="none"
                 _hover={{ textDecoration: 'none' }}
                 fontSize="14px"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
               >
                 Login / Register
               </Link>
@@ -101,6 +103,7 @@ export const Footer = () => {
                 textDecoration="none"
                 _hover={{ textDecoration: 'none' }}
                 fontSize="14px"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
               >
                 My Order
               </Link>
@@ -117,6 +120,7 @@ export const Footer = () => {
                 textDecoration="none"
                 _hover={{ textDecoration: 'none' }}
                 fontSize="14px"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
               >
                 Coupon
               </Link>
@@ -134,6 +138,7 @@ export const Footer = () => {
                 textDecoration="none"
                 _hover={{ textDecoration: 'none' }}
                 fontSize="14px"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
               >
                 About Us
               </Link>
@@ -150,6 +155,7 @@ export const Footer = () => {
                 textDecoration="none"
                 _hover={{ textDecoration: 'none' }}
                 fontSize="14px"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
               >
                 FAQ
               </Link>
@@ -166,6 +172,7 @@ export const Footer = () => {
                 textDecoration="none"
                 _hover={{ textDecoration: 'none' }}
                 fontSize="14px"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
               >
                 Privacy Policy
               </Link>
@@ -174,6 +181,7 @@ export const Footer = () => {
                 textDecoration="none"
                 _hover={{ textDecoration: 'none' }}
                 fontSize="14px"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
               >
                 Terms Of Use
               </Link>
@@ -191,6 +199,7 @@ export const Footer = () => {
                 textDecoration="none"
                 _hover={{ textDecoration: 'none' }}
                 fontSize="14px"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
               >
                 Become a seller
               </Link>

@@ -59,6 +59,7 @@ export const Header = () => {
                 fontWeight="medium"
                 color="#808080"
                 position="relative"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
                 _after={{
                   content: '""',
                   position: 'absolute',
@@ -78,6 +79,7 @@ export const Header = () => {
                 fontWeight="medium"
                 color="#808080"
                 position="relative"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
                 _hover={{
                   _after: {
                     content: '""',
@@ -103,6 +105,7 @@ export const Header = () => {
                     display="flex"
                     alignItems="center"
                     gap={1}
+                    _focus={{ outline: 'none', boxShadow: 'none' }}
                     _hover={{
                       _after: {
                         content: '""',
@@ -187,13 +190,19 @@ export const Header = () => {
                 </DrawerHeader>
                 <DrawerBody>
                   <VStack align="stretch" gap={4}>
-                    <Link href="/" fontWeight="medium" color="#808080">
+                    <Link
+                      href="/"
+                      fontWeight="medium"
+                      color="#808080"
+                      _focus={{ outline: 'none', boxShadow: 'none' }}
+                    >
                       Home
                     </Link>
                     <Link
                       href="/how-it-works"
                       fontWeight="medium"
                       color="#808080"
+                      _focus={{ outline: 'none', boxShadow: 'none' }}
                     >
                       How it works
                     </Link>
