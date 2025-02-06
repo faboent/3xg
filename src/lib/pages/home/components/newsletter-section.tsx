@@ -12,9 +12,9 @@ export const NewsletterSection = () => {
   return (
     <Box py={20} bg="white">
       <Container maxW="container.xl">
-        <Box maxW="600px" px={6}>
+        <Box maxW="600px" px={3}>
           <Heading
-            fontSize={['24px', '26px', '28px', '32px']}
+            fontSize={['20px', '24px', '28px', '32px']}
             mb={4}
             color="navy.900"
           >
@@ -22,7 +22,7 @@ export const NewsletterSection = () => {
           </Heading>
 
           <Text
-            fontSize={['16px', '18px', '19px', '20px']}
+            fontSize={['14px', '16px', '19px', '20px']}
             mb={8}
             color="gray.700"
           >
@@ -51,7 +51,7 @@ export const NewsletterSection = () => {
             </Button>
           </Box>
 
-          <Text fontSize="sm" color="gray.500">
+          <Text fontSize={['10px', '10px', '10px', '11px']} color="gray.500">
             By joining, you agree to our{' '}
             <Link color="rgb(231, 146, 113)" href="/terms">
               terms and conditions

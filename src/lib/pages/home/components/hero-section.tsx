@@ -22,7 +22,7 @@ export const HeroSection = () => {
         position="relative"
         borderRadius="xl"
         py={16}
-        px={4}
+        px={3}
         mt={5}
       >
         <Box

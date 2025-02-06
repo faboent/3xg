@@ -8,7 +8,6 @@ import {
   HStack,
   Image,
   Link,
-  IconButton,
   VStack,
   Text,
 } from '@chakra-ui/react';
@@ -26,13 +25,15 @@ import {
   DrawerBody,
   DrawerCloseTrigger,
 } from '@/components/ui/drawer';
+// Update imports
+import { MenuButton } from '@/components/ui/icon-button';
 import { useState } from 'react';
 
 export const Header = () => {
   const [isResourceOpen, setIsResourceOpen] = useState(false);
 
   return (
-    <Box as="nav" py={4} borderBottom="1px" mt={10}>
+    <Box as="nav" borderBottom="1px" mt={10}>
       <Container maxW="container.xl">
         <Flex justify="space-between" align="center">
           {/* Logo */}
@@ -47,7 +48,11 @@ export const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <Box display={{ base: 'none', md: 'block' }}>
+          <Box
+            display={{ base: 'none', md: 'flex' }}
+            flex={1}
+            justifyContent="center"
+          >
             <HStack gap={8}>
               <Link
                 href="/"
@@ -152,8 +157,10 @@ export const Header = () => {
                 </MenuContent>
               </MenuRoot>
             </HStack>
+          </Box>
 
-            {/* Desktop Action Buttons */}
+          {/* Desktop Action Buttons */}
+          <Box display={{ base: 'none', md: 'block' }}>
             <HStack gap={4}>
               <Button variant="ghost" colorScheme="gray" color="#E7906B">
                 Login
@@ -172,7 +179,7 @@ export const Header = () => {
           <Box display={{ base: 'block', md: 'none' }}>
             <DrawerRoot>
               <DrawerTrigger asChild>
-                <IconButton aria-label="Open menu" variant="ghost" />
+                <MenuButton />
               </DrawerTrigger>
               <DrawerContent>
                 <DrawerHeader>

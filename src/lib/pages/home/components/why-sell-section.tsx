@@ -73,7 +73,7 @@ export const WhySellSection = () => {
           gap={8}
         >
           {features.map((feature, index) => (
-            <Box key={index} textAlign="center" p={6}>
+            <Box key={index} textAlign="center" p={3}>
               <Image
                 src={feature.image}
                 alt={feature.title}

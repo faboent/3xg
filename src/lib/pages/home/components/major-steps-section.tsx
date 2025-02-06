@@ -38,7 +38,6 @@ export const MajorStepsSection = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            mt={20}
           >
             <Image
               src="/assets/grow.svg"
@@ -48,7 +47,7 @@ export const MajorStepsSection = () => {
             />
           </Box>
 
-          <Box flex="1" minW={{ base: '100%', md: '400px' }} p={8}>
+          <Box flex="1" minW={{ base: '100%', md: '400px' }} p={3}>
             <Heading
               textAlign="center"
               mb={8}
