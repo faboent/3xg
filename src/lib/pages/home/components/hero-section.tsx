@@ -27,8 +27,8 @@ export const HeroSection = () => {
       >
         <Box
           position="absolute"
-          left="10%"
-          top="5%"
+          left="17%"
+          top="15%"
           display={['none', 'none', 'block', 'block']}
         >
           <Image
@@ -41,7 +41,7 @@ export const HeroSection = () => {
         <Box
           position="absolute"
           right="17%"
-          top="20%"
+          top="30%"
           display={['none', 'none', 'block', 'block']}
         >
           <Image
