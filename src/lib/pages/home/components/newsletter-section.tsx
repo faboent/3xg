@@ -45,7 +45,7 @@ export const NewsletterSection = () => {
               color="white"
               px={[4, 6, 8, 8]}
               _hover={{ bg: 'rgb(220, 135, 102)' }}
-              borderRadius="5px"
+              borderRadius="10px"
             >
               Subscribe
             </Button>

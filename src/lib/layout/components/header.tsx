@@ -28,9 +28,11 @@ import {
 // Update imports
 import { MenuButton } from '@/components/ui/icon-button';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export const Header = () => {
   const [isResourceOpen, setIsResourceOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <Box as="nav" borderBottom="1px" mt={10}>
@@ -61,7 +63,7 @@ export const Header = () => {
                 position="relative"
                 _focus={{ outline: 'none', boxShadow: 'none' }}
                 _after={{
-                  content: '""',
+                  content: pathname === '/' ? '""' : 'none',
                   position: 'absolute',
                   bottom: '-6px',
                   left: '0',
@@ -71,15 +73,6 @@ export const Header = () => {
                   display: 'block',
                   textDecoration: 'none',
                 }}
-              >
-                Home
-              </Link>
-              <Link
-                href="/how-it-works"
-                fontWeight="medium"
-                color="#808080"
-                position="relative"
-                _focus={{ outline: 'none', boxShadow: 'none' }}
                 _hover={{
                   _after: {
                     content: '""',
@@ -90,7 +83,38 @@ export const Header = () => {
                     height: '2px',
                     backgroundColor: '#E7906B',
                     display: 'block',
-                    textDecoration: 'none',
+                  },
+                }}
+              >
+                Home
+              </Link>
+              <Link
+                href="/how-it-works"
+                fontWeight="medium"
+                color="#808080"
+                position="relative"
+                _focus={{ outline: 'none', boxShadow: 'none' }}
+                _after={{
+                  content: pathname === '/how-it-works' ? '""' : 'none',
+                  position: 'absolute',
+                  bottom: '-6px',
+                  left: '0',
+                  width: '50%',
+                  height: '2px',
+                  backgroundColor: '#E7906B',
+                  display: 'block',
+                  textDecoration: 'none',
+                }}
+                _hover={{
+                  _after: {
+                    content: '""',
+                    position: 'absolute',
+                    bottom: '-6px',
+                    left: '0',
+                    width: '50%',
+                    height: '2px',
+                    backgroundColor: '#E7906B',
+                    display: 'block',
                   },
                 }}
               >
@@ -165,13 +189,19 @@ export const Header = () => {
           {/* Desktop Action Buttons */}
           <Box display={{ base: 'none', md: 'block' }}>
             <HStack gap={4}>
-              <Button variant="ghost" colorScheme="gray" color="#E7906B">
+              <Button
+                variant="ghost"
+                colorScheme="gray"
+                color="#E7906B"
+                borderRadius="10px"
+              >
                 Login
               </Button>
               <Button
                 bg="rgb(231, 146, 113)"
                 color="white"
                 _hover={{ bg: 'rgb(220, 135, 102)' }}
+                borderRadius="10px"
               >
                 Get Started
               </Button>
@@ -272,13 +302,19 @@ export const Header = () => {
                       )}
                     </Box>
 
-                    <Button variant="ghost" colorScheme="gray" color="#E7906B">
+                    <Button
+                      variant="ghost"
+                      colorScheme="gray"
+                      color="#E7906B"
+                      borderRadius="10px"
+                    >
                       Login
                     </Button>
                     <Button
                       bg="rgb(231, 146, 113)"
                       color="white"
                       _hover={{ bg: 'rgb(220, 135, 102)' }}
+                      borderRadius="10px"
                     >
                       Get Started
                     </Button>

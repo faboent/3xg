@@ -6,7 +6,7 @@ import { NewsletterSection } from './components/newsletter-section';
 
 export const Home = () => {
   return (
-    <Flex direction="column" w="full" minH="100vh">
+    <Flex direction="column" w="full">
       <HeroSection />
       <WhySellSection />
       <MajorStepsSection />
